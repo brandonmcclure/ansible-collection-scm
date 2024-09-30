@@ -6,9 +6,6 @@ forgejo_runner_install_path: /opt/forgejo-runner/{{ forgejo_runner_version }}
 
 forgejo_runner_delegate_to: localhost
 
-forgejo_runner_cache_directory: /var/cache/ansible/forgejo-runner
-
-forgejo_runner_remote_tmp_directory: "{{ forgejo_runner_cache_directory }}/{{ forgejo_runner_version }}"
 
 forgejo_runner_requirements:
   - iproute2
