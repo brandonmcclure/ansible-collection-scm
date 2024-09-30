@@ -6,10 +6,6 @@ forgejo_runner_install_path: /opt/forgejo-runner/{{ forgejo_runner_version }}
 
 forgejo_runner_delegate_to: localhost
 
-forgejo_runner_local_tmp_directory: "{{
-  lookup('env', 'CUSTOM_LOCAL_TMP_DIRECTORY') |
-  default(lookup('env', 'HOME') ~ '/.cache/ansible/forgejo-runner', true) }}/{{ forgejo_runner_version }}"
-
 forgejo_runner_cache_directory: /var/cache/ansible/forgejo-runner
 
 forgejo_runner_remote_tmp_directory: "{{ forgejo_runner_cache_directory }}/{{ forgejo_runner_version }}"
